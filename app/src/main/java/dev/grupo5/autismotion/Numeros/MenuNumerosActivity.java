@@ -9,7 +9,7 @@ import android.widget.Button;
 
 import dev.grupo5.autismotion.R;
 
-public class MenuNumerosActivity extends ListActivity {
+public class MenuNumerosActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

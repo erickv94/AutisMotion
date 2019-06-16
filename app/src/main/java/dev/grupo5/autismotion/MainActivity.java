@@ -24,7 +24,7 @@ public class MainActivity extends ListActivity {
         if(position!=3){
             String nombreValue=activities[position];
             try{
-                Class<?> clase=Class.forName("dev.grupo5.autismotion."+nombreValue);
+                Class<?> clase=Class.forName("dev.grupo5.autismotion.Numeros."+nombreValue);
                 Intent inte = new Intent(this,clase);
                 this.startActivity(inte);
             }catch(ClassNotFoundException e){
