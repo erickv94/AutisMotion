@@ -43,7 +43,7 @@
             android:layout_marginEnd="241dp"
             android:layout_marginRight="241dp"
             android:layout_marginBottom="32dp"
-            android:background="@drawable/animal_number_3_t" />
+             />
 
         <ImageView
             android:layout_width="70dp"
@@ -77,7 +77,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="38dp"
-            android:background="@drawable/animal_number_4_t" />
+            />
 
 
     </RelativeLayout>
