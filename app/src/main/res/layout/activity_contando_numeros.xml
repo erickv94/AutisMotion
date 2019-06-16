@@ -26,6 +26,7 @@
                 android:layout_height="289dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="85dp"
+
                  />
         </LinearLayout>
 
@@ -34,6 +35,7 @@
 
         <ImageButton
             android:id="@+id/btnizquierda"
+            android:onClick="moverIzquierda"
             android:layout_width="110dp"
             android:layout_height="60dp"
             android:layout_marginLeft="60dp"
@@ -41,6 +43,7 @@
 
         <ImageButton
             android:id="@+id/btnderecha"
+            android:onClick="moverderecha"
             android:layout_width="110dp"
             android:layout_height="60dp"
             android:layout_marginLeft="60dp"
