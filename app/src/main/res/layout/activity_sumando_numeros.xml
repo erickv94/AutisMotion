@@ -46,7 +46,7 @@
 
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imageNum1Sum"
             android:layout_width="112dp"
             android:layout_height="152dp"
             android:layout_alignParentStart="true"
@@ -81,6 +81,7 @@
             android:background="@drawable/simbolo_mas_t" />
 
         <ImageView
+            android:id="@+id/imageNum2Sum"
             android:layout_width="127dp"
             android:layout_height="146dp"
             android:layout_alignParentStart="true"
@@ -119,6 +120,7 @@
 
 
         <ImageButton
+            android:id="@+id/imageNum1ResulSuma"
             android:layout_width="91dp"
             android:layout_height="117dp"
             android:layout_alignParentStart="true"
@@ -133,10 +135,10 @@
             android:layout_marginEnd="265dp"
             android:layout_marginRight="265dp"
             android:layout_marginBottom="94dp"
-            android:background="@drawable/animal_number_5_t" />
+             />
 
         <ImageButton
-            android:id="@+id/imageButton12"
+            android:id="@+id/imageNum2ResulSuma"
             android:layout_width="91dp"
             android:layout_height="117dp"
             android:layout_alignParentStart="true"
@@ -151,9 +153,10 @@
             android:layout_marginEnd="143dp"
             android:layout_marginRight="143dp"
             android:layout_marginBottom="12dp"
-            android:background="@drawable/animal_number_3_t" />
+             />
 
         <ImageButton
+            android:id="@+id/imageNum3ResulSuma"
             android:layout_width="wrap_content"
             android:layout_height="114dp"
             android:layout_alignParentStart="true"
@@ -168,7 +171,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="99dp"
-            android:background="@drawable/animal_number_4_t" />
+             />
 
 
     </RelativeLayout>
