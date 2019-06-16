@@ -5,16 +5,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/FONDO"
+    android:background="@drawable/fondo"
     tools:context=".Numeros.ContandoNumerosActivity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Los numeros"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="40sp"
+<TableLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TableRow>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/los_numeros_label"
+            android:layout_marginTop="30dp"/>
+    </TableRow>
+    <TableRow>
 
-        />
+        <ImageView
+            android:id="@+id/numeroizquierda"
+            android:layout_width="145dp"
+            android:layout_height="289dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/animal_number_2_t" />
+    </TableRow>
+    <LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="anterior"
+            android:layout_marginLeft="80dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android: android:text="Siguiente"
+            android:layout_marginLeft="60dp"/>
+    </LinearLayout>
+    <TableRow>
+        <LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+        </LinearLayout>
+    </TableRow>
+</TableLayout>
+
+
+
+
 
 </RelativeLayout>
