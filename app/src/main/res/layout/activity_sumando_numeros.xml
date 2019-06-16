@@ -6,6 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/FONDO"
-    tools:context=".MainActivity">
+    tools:context=".Numeros.SumandoNumerosActivity">
 
 </LinearLayout>
