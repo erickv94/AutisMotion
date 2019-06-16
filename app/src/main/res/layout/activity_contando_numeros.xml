@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,69 +7,118 @@
     android:orientation="vertical"
     android:background="@drawable/fondo"
     tools:context=".Numeros.ContandoNumerosActivity">
-<TableLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <TableRow>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="361dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/los_numeros_label"
-            android:layout_marginTop="30dp"/>
-    </TableRow>
-    <TableRow>
-        <LinearLayout>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="23dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="585dp"
+            android:background="@drawable/los_numeros_label" />
 
-            <ImageView
-                android:id="@+id/numerocontar"
-                android:layout_width="220dp"
-                android:layout_height="289dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="85dp"
 
-                 />
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/numerocontar"
+            android:layout_width="220dp"
+            android:layout_height="289dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="96dp"
+            android:layout_marginLeft="96dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginEnd="94dp"
+            android:layout_marginRight="94dp"
+            android:layout_marginBottom="272dp" />
 
-    </TableRow>
-    <LinearLayout>
 
         <ImageButton
             android:id="@+id/btnizquierda"
-            android:onClick="moverIzquierda"
             android:layout_width="110dp"
             android:layout_height="60dp"
-            android:layout_marginLeft="60dp"
-            android:background="@drawable/boton_izquierda_t" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="56dp"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="491dp"
+            android:layout_marginEnd="245dp"
+            android:layout_marginRight="245dp"
+            android:layout_marginBottom="180dp"
+            android:background="@drawable/boton_izquierda_t"
+            android:onClick="moverIzquierda" />
 
         <ImageButton
             android:id="@+id/btnderecha"
-            android:onClick="moverderecha"
             android:layout_width="110dp"
             android:layout_height="60dp"
-            android:layout_marginLeft="60dp"
-            android:background="@drawable/boton_derecha_t" />
-    </LinearLayout>
-    <TableRow>
-        <LinearLayout android:layout_marginTop="25dp">
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="244dp"
+            android:layout_marginLeft="244dp"
+            android:layout_marginTop="486dp"
+            android:layout_marginEnd="57dp"
+            android:layout_marginRight="57dp"
+            android:layout_marginBottom="185dp"
+            android:background="@drawable/boton_derecha_t"
+            android:onClick="moverderecha" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Escuha la pronunciación ->"
-                android:textSize="20dp"
-                android:layout_marginTop="20dp"
-                android:textColor="#b41616"
-                android:textStyle="bold"
-                />
-            <ImageButton
-                android:id="@+id/botonsonido"
-                android:layout_width="110dp"
-                android:layout_height="60dp"
-                android:background="@drawable/boton_sonido_t"
-                android:layout_marginLeft="10dp"
-                />
-        </LinearLayout>
-    </TableRow>
 
-    </TableLayout>
-</RelativeLayout>
+        <ImageView
+            android:layout_width="208dp"
+            android:layout_height="69dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="45dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="582dp"
+            android:layout_marginEnd="159dp"
+            android:layout_marginRight="159dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/escuchame_label" />
+
+        <ImageButton
+            android:id="@+id/botonsonido"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="237dp"
+            android:layout_marginLeft="237dp"
+            android:layout_marginTop="592dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginRight="64dp"
+            android:layout_marginBottom="79dp"
+            android:background="@drawable/boton_sonido_t" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
