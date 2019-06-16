@@ -11,8 +11,8 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="383dp"
-        android:layout_height="230dp"
+        android:layout_width="388dp"
+        android:layout_height="199dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -21,13 +21,14 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225">
+        app:layout_constraintVertical_bias="0.169">
 
 
-        <ImageButton
+        <ImageView
+            android:id="@+id/imageView2"
             android:layout_width="112dp"
             android:layout_height="152dp"
             android:layout_alignParentStart="true"
@@ -44,7 +45,24 @@
             android:layout_marginBottom="32dp"
             android:background="@drawable/animal_number_3_t" />
 
-        <ImageButton
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="73dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="160dp"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="88dp"
+            android:layout_marginEnd="153dp"
+            android:layout_marginRight="153dp"
+            android:layout_marginBottom="69dp"
+            android:background="@drawable/simbolo_mas_t" />
+
+        <ImageView
             android:layout_width="127dp"
             android:layout_height="146dp"
             android:layout_alignParentStart="true"
@@ -64,15 +82,84 @@
 
     </RelativeLayout>
 
-    
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="383dp"
+        android:layout_height="230dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707">
 
 
+        <ImageButton
+            android:layout_width="91dp"
+            android:layout_height="117dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="27dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="265dp"
+            android:layout_marginRight="265dp"
+            android:layout_marginBottom="94dp"
+            android:background="@drawable/animal_number_5_t" />
+
+        <ImageButton
+            android:id="@+id/imageButton12"
+            android:layout_width="91dp"
+            android:layout_height="117dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="149dp"
+            android:layout_marginLeft="149dp"
+            android:layout_marginTop="101dp"
+            android:layout_marginEnd="143dp"
+            android:layout_marginRight="143dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/animal_number_3_t" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="114dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="273dp"
+            android:layout_marginLeft="273dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="99dp"
+            android:background="@drawable/animal_number_4_t" />
+
+
+    </RelativeLayout>
 
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="310dp"
-        android:layout_height="83dp"
+        android:layout_width="302dp"
+        android:layout_height="61dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -86,6 +173,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.012"
         app:srcCompat="@drawable/sumando_label" />
+
 
 </android.support.constraint.ConstraintLayout>
 
