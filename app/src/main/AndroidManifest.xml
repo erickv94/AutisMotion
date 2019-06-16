@@ -10,9 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Numeros.MenuNumerosActivity"></activity>
-        <activity android:name=".Numeros.ContandoNumerosActivity" />
-        <activity android:name=".Numeros.RestandoNumerosActivity" />
-        <activity android:name=".Numeros.SumandoNumerosActivity" />
+        <activity android:name=".Numeros.ContandoNumerosActivity" android:screenOrientation="portrait" />
+        <activity android:name=".Numeros.RestandoNumerosActivity" android:screenOrientation="portrait" />
+        <activity android:name=".Numeros.SumandoNumerosActivity" android:screenOrientation="portrait" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
