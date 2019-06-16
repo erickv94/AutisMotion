@@ -1,5 +1,6 @@
 package dev.grupo5.autismotion.Numeros;
 
+import android.app.ListActivity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +9,7 @@ import android.widget.Button;
 
 import dev.grupo5.autismotion.R;
 
-public class MenuNumerosActivity extends AppCompatActivity {
+public class MenuNumerosActivity extends ListActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
