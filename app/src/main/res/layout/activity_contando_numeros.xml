@@ -20,23 +20,25 @@
     <TableRow>
 
         <ImageView
-            android:id="@+id/numeroizquierda"
+            android:id="@+id/numerocontar"
             android:layout_width="145dp"
             android:layout_height="289dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/animal_number_2_t" />
     </TableRow>
     <LinearLayout>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="anterior"
-            android:layout_marginLeft="80dp"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android: android:text="Siguiente"
-            android:layout_marginLeft="60dp"/>
+
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/boton_izquierda_t" />
+
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/boton_derecha_t" />
     </LinearLayout>
     <TableRow>
         <LinearLayout>
@@ -46,10 +48,5 @@
                 android:text=""/>
         </LinearLayout>
     </TableRow>
-</TableLayout>
-
-
-
-
-
+    </TableLayout>
 </RelativeLayout>
