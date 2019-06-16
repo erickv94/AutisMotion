@@ -25,7 +25,7 @@ public class MateBD extends SQLiteOpenHelper {
 
     }
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table imagenesnumeros ( id inetger not null, valor integer, nombre_imagen varchar(30), primary key (id) );");
+        db.execSQL("create table imagenesnumeros ( id integer not null, valor integer, nombre_imagen varchar(30), primary key (id) );");
 
     }
 
