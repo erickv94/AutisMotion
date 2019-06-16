@@ -18,35 +18,58 @@
             android:layout_marginTop="30dp"/>
     </TableRow>
     <TableRow>
+        <LinearLayout>
 
-        <ImageView
-            android:id="@+id/numerocontar"
-            android:layout_width="145dp"
-            android:layout_height="289dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/animal_number_2_t" />
+            <ImageView
+                android:id="@+id/numerocontar"
+                android:layout_width="220dp"
+                android:layout_height="289dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="85dp"
+
+                 />
+        </LinearLayout>
+
     </TableRow>
     <LinearLayout>
 
         <ImageButton
+            android:id="@+id/btnizquierda"
+            android:onClick="moverIzquierda"
             android:layout_width="110dp"
-            android:layout_height="match_parent"
+            android:layout_height="60dp"
             android:layout_marginLeft="60dp"
             android:background="@drawable/boton_izquierda_t" />
 
         <ImageButton
+            android:id="@+id/btnderecha"
+            android:onClick="moverderecha"
             android:layout_width="110dp"
             android:layout_height="60dp"
             android:layout_marginLeft="60dp"
             android:background="@drawable/boton_derecha_t" />
     </LinearLayout>
     <TableRow>
-        <LinearLayout>
-            <Button
+        <LinearLayout android:layout_marginTop="25dp">
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""/>
+                android:text="Escuha la pronunciación ->"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#b41616"
+                android:textStyle="bold"
+                />
+            <ImageButton
+                android:id="@+id/botonsonido"
+                android:layout_width="110dp"
+                android:layout_height="60dp"
+                android:background="@drawable/boton_sonido_t"
+                android:layout_marginLeft="10dp"
+                />
         </LinearLayout>
     </TableRow>
+
     </TableLayout>
 </RelativeLayout>
