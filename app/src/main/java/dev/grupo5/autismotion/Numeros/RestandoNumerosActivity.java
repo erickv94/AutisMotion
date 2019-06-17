@@ -14,19 +14,24 @@ import java.util.Random;
 
 import dev.grupo5.autismotion.R;
 
+
+
+
+
 public class RestandoNumerosActivity extends AppCompatActivity {
+
+
     //imagenes numeros
     ImageView imageNum1Res,imageNum2Res;
     //botones imagenes respuesta
     ImageButton imageNum1ResulResta,imageNum2ResulResta,imageNum3ResulResta;
-    //resultado resta
+    //resultado suma
     int resultado =0;
 
     //generando dos numeros aleatorios entre 0 y 4 para realizar suma
     Random aleatorio = new Random(System.currentTimeMillis());
     int num1resta=aleatorio.nextInt(5);
     int num2resta=aleatorio.nextInt(5);
-
 
     //generando posiciones para resultados  correcto de 0 a 2
     int posicion=aleatorio.nextInt(3);
@@ -41,11 +46,13 @@ public class RestandoNumerosActivity extends AppCompatActivity {
     MediaPlayer media;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restando_numeros);
         setTitle("Restando Numeros");
+
         imageNum1Res=findViewById(R.id.imageNum1Res);
         imageNum2Res=findViewById(R.id.imageNum2Res);
         imageNum1ResulResta=findViewById(R.id.imageNum1ResulResta);
@@ -59,8 +66,8 @@ public class RestandoNumerosActivity extends AppCompatActivity {
         //asignar resultados a los botones.
         asignacionResultado(posicion,resultado,resulaleat1,resulaleat2,num1resta,num2resta);
 
-        Button btnrestar = (Button) findViewById(R.id.btnDeNuevo);
-        btnrestar.setOnClickListener(new View.OnClickListener() {
+        Button btrestar = (Button) findViewById(R.id.btnDeNuevo2);
+        btrestar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(),RestandoNumerosActivity.class);
@@ -68,7 +75,10 @@ public class RestandoNumerosActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
     }
+
 
     public void resultadouno(View v){
         if(posicion==0){
@@ -132,11 +142,11 @@ public class RestandoNumerosActivity extends AppCompatActivity {
         while(resulaleat2==resultado || resulaleat2==resulaleat1){
             resulaleat2=aleatorio.nextInt(5);
         }
-        while(num1<num2){
-             num1resta=aleatorio.nextInt(5);
-             num2resta=aleatorio.nextInt(5);
-        }
+        while (num1<num2){
+             num1=aleatorio.nextInt(5);
+             num2=aleatorio.nextInt(5);
 
+        }
 
         switch (posicion){
 
@@ -938,3 +948,5 @@ public class RestandoNumerosActivity extends AppCompatActivity {
     }
 
 }
+
+
