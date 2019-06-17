@@ -1,9 +1,8 @@
 package dev.grupo5.autismotion.Animales;
 
 import android.content.pm.ActivityInfo;
-import android.media.MediaPlayer;
+
 import android.net.Uri;
-import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.WindowManager;
@@ -23,6 +22,7 @@ public class CuentoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cuento);
+        setTitle("!Es hora de ver un cuento!"+"               Toca la pantalla y presiona el boton Play");
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
