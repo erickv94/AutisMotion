@@ -11,12 +11,7 @@
         <activity android:name=".Numeros.SumandoNumerosActivity" android:screenOrientation="portrait"/>
         <activity android:name=".Emociones.EmocionesActivity" android:screenOrientation="portrait"/>
         <activity android:name=".Animales.CuentoActivity"/>
-        <activity android:name=".Animales.AnimalesActivity"/>
-        <activity android:name=".Animales.AnimalesMenuActivity"/>
-        <activity android:name=".Numeros.MenuNumerosActivity"/>
-        <activity android:name=".Numeros.ContandoNumerosActivity"/>
-        <activity android:name=".Numeros.RestandoNumerosActivity"/>
-        <activity android:name=".Numeros.SumandoNumerosActivity"/>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
