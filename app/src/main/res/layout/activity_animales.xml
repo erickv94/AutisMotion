@@ -37,6 +37,18 @@
                 android:textSize="30dp"
                 android:textStyle="bold" />
         </TableRow>
+        <LinearLayout
+            android:layout_width="194dp"
+            android:layout_height="32dp">
+
+            <TextView
+                android:id="@+id/lblConteo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="" />
+
+
+        </LinearLayout>
         <LinearLayout>
 
             <ImageView
@@ -73,18 +85,7 @@
                 android:text="Aceptar" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="194dp"
-            android:layout_height="32dp">
 
-            <TextView
-                android:id="@+id/lblConteo"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="" />
-
-
-        </LinearLayout>
 
         <TableRow>
             <LinearLayout/>

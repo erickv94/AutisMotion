@@ -45,8 +45,8 @@ public class AnimalesActivity extends Activity {
             public void onClick(View v) {
                 String nombre=editNombre.getText().toString().toLowerCase();
                 if (nombre.equals(nombresAnimales[numeroGenerado])){
-                    establecerAnimal(numeroGenerado);
-                    esperar();
+                   establecerAnimal(numeroGenerado);
+                   esperar();
                 }else {
                     Toast.makeText(getApplicationContext(),"No es el animal correcto",Toast.LENGTH_SHORT).show();
                     intentos=intentos-1;
@@ -72,13 +72,12 @@ public class AnimalesActivity extends Activity {
     protected int generarAleatorio(){
         return (int)(Math.random()*nombresAnimales.length);
     }
-    public void esperar(){
-        new CountDownTimer(3000,1000){
 
+    public  void esperar(){
+        new CountDownTimer(5000,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                lblConteo.setText("Generando nuevo animal en: "+ (millisUntilFinished/1000));
-
+                lblConteo.setText("Generando nuevo animal en: "+(millisUntilFinished/1000));
             }
 
             @Override
@@ -91,4 +90,5 @@ public class AnimalesActivity extends Activity {
             }
         }.start();
     }
+
 }
