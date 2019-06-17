@@ -72,20 +72,9 @@ public class SumandoNumerosActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(),SumandoNumerosActivity.class);
                 startActivityForResult(intent,0);
+                finish();
             }
         });
-
-        Button btnregresar = (Button) findViewById(R.id.btnregresar);
-        btnregresar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(),MenuNumerosActivity.class);
-                startActivityForResult(intent,0);
-            }
-        });
-
-
-
 
 
     }

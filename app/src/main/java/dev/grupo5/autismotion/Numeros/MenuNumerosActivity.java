@@ -51,14 +51,7 @@ public class MenuNumerosActivity extends AppCompatActivity {
             }
         });
 
-        Button principal = (Button) findViewById(R.id.principal);
-        principal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), MainActivity.class);
-                startActivityForResult(intent,0);
-            }
-        });
+
 
 
     }
