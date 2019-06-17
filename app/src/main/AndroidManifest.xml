@@ -13,7 +13,7 @@
         <activity android:name=".Animales.AnimalesActivity"></activity>
         <activity android:name=".Animales.AnimalesMenuActivity" />
         <activity android:name=".Numeros.MenuNumerosActivity" />
-        <activity android:name=".Numeros.ContandoNumerosActivity" />
+        <activity android:name=".Numeros.ContandoNumerosActivity" android:screenOrientation="portrait" />
         <activity android:name=".Numeros.RestandoNumerosActivity" />
         <activity android:name=".Numeros.SumandoNumerosActivity" />
         <activity android:name=".MainActivity">
