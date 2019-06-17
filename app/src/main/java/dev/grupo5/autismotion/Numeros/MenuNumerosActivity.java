@@ -2,6 +2,7 @@ package dev.grupo5.autismotion.Numeros;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,10 +13,13 @@ import dev.grupo5.autismotion.R;
 
 public class MenuNumerosActivity extends AppCompatActivity {
 
+    MediaPlayer reproductor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_numeros);
+        reproductor= MediaPlayer.create(getApplicationContext(), R.raw.sonidofondonumeros);
+        reproductor.start();
 
 
 
@@ -57,6 +61,20 @@ public class MenuNumerosActivity extends AppCompatActivity {
         });
 
 
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (reproductor.isPlaying()) {
+            reproductor.stop();
+            reproductor.release();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        reproductor.start();
     }
 
 

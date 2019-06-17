@@ -57,7 +57,7 @@ public class ContandoNumerosActivity extends AppCompatActivity  {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     switch(contador){
                         case 0:{
-                            if(result.get(0).equals("0")){
+                            if(result.get(0).equals("0") || result.get(0).equals("cero")){
                                 stopPlaying();
                                 media = MediaPlayer.create(getApplicationContext(), R.raw.exito);
                                 media.start();
@@ -69,7 +69,7 @@ public class ContandoNumerosActivity extends AppCompatActivity  {
                             break;
                         }
                         case 1:{
-                            if(result.get(0).equals("1")){
+                            if(result.get(0).equals("1")|| result.get(0).equals("uno")){
                                 stopPlaying();
                                 media = MediaPlayer.create(getApplicationContext(), R.raw.exito);
                                 media.start();
@@ -81,7 +81,7 @@ public class ContandoNumerosActivity extends AppCompatActivity  {
                             break;
                         }
                         case 2:{
-                            if(result.get(0).equals("2")){
+                            if(result.get(0).equals("2")|| result.get(0).equals("dos")){
                                 stopPlaying();
                                 media = MediaPlayer.create(getApplicationContext(), R.raw.exito);
                                 media.start();
@@ -93,7 +93,7 @@ public class ContandoNumerosActivity extends AppCompatActivity  {
                             break;
                         }
                         case 3:{
-                            if(result.get(0).equals("3")){
+                            if(result.get(0).equals("3")|| result.get(0).equals("tres")){
                                 stopPlaying();
                                 media = MediaPlayer.create(getApplicationContext(), R.raw.exito);
                                 media.start();
@@ -105,7 +105,7 @@ public class ContandoNumerosActivity extends AppCompatActivity  {
                             break;
                         }
                         case 4:{
-                            if(result.get(0).equals("4")){
+                            if(result.get(0).equals("4")|| result.get(0).equals("cuatro")){
                                 stopPlaying();
                                 media = MediaPlayer.create(getApplicationContext(), R.raw.exito);
                                 media.start();
@@ -117,7 +117,7 @@ public class ContandoNumerosActivity extends AppCompatActivity  {
                             break;
                         }
                         case 5:{
-                            if(result.get(0).equals("5")){
+                            if(result.get(0).equals("5")|| result.get(0).equals("cinco")){
                                 stopPlaying();
                                 media = MediaPlayer.create(getApplicationContext(), R.raw.exito);
                                 media.start();
@@ -129,7 +129,7 @@ public class ContandoNumerosActivity extends AppCompatActivity  {
                             break;
                         }
                         case 6:{
-                            if(result.get(0).equals("6")){
+                            if(result.get(0).equals("6")|| result.get(0).equals("seis")){
                                 stopPlaying();
                                 media = MediaPlayer.create(getApplicationContext(), R.raw.exito);
                                 media.start();
@@ -141,7 +141,7 @@ public class ContandoNumerosActivity extends AppCompatActivity  {
                             break;
                         }
                         case 7:{
-                            if(result.get(0).equals("7")){
+                            if(result.get(0).equals("7")|| result.get(0).equals("siete")){
                                 stopPlaying();
                                 media = MediaPlayer.create(getApplicationContext(), R.raw.exito);
                                 media.start();
@@ -153,7 +153,7 @@ public class ContandoNumerosActivity extends AppCompatActivity  {
                             break;
                         }
                         case 8:{
-                            if(result.get(0).equals("8")){
+                            if(result.get(0).equals("8")|| result.get(0).equals("ocho")){
                                 stopPlaying();
                                 media = MediaPlayer.create(getApplicationContext(), R.raw.exito);
                                 media.start();
@@ -165,7 +165,7 @@ public class ContandoNumerosActivity extends AppCompatActivity  {
                             break;
                         }
                         case 9:{
-                            if(result.get(0).equals("9")){
+                            if(result.get(0).equals("9")|| result.get(0).equals("nueve")){
                                 stopPlaying();
                                 media = MediaPlayer.create(getApplicationContext(), R.raw.exito);
                                 media.start();
