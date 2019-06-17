@@ -2,7 +2,6 @@ package dev.grupo5.autismotion.Emociones;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import dev.grupo5.autismotion.R;
 
 public class EmocionesActivity extends AppCompatActivity {
