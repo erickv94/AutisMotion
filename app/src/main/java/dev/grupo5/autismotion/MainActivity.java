@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 
+import dev.grupo5.autismotion.Animales.AnimalesActivity;
+
 import dev.grupo5.autismotion.Emociones.EmocionesActivity;
 import dev.grupo5.autismotion.Numeros.MenuNumerosActivity;
 
@@ -38,4 +40,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void animalesOption(View view){
+        //cambiar activitygit
+        Intent intent= new Intent(MainActivity.this, AnimalesActivity.class);
+        startActivity(intent);
+
+    }
+
 }
+
+

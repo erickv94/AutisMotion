@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/fondo"
+    android:orientation="vertical"
     tools:context=".Numeros.SumandoNumerosActivity">
 
 
@@ -21,7 +21,7 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.012"
@@ -39,14 +39,14 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.169">
+        app:layout_constraintVertical_bias="0.151">
 
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imageNum1Sum"
             android:layout_width="112dp"
             android:layout_height="152dp"
             android:layout_alignParentStart="true"
@@ -60,8 +60,7 @@
             android:layout_marginTop="46dp"
             android:layout_marginEnd="241dp"
             android:layout_marginRight="241dp"
-            android:layout_marginBottom="32dp"
-             />
+            android:layout_marginBottom="32dp" />
 
         <ImageView
             android:layout_width="70dp"
@@ -81,6 +80,7 @@
             android:background="@drawable/simbolo_mas_t" />
 
         <ImageView
+            android:id="@+id/imageNum2Sum"
             android:layout_width="127dp"
             android:layout_height="146dp"
             android:layout_alignParentStart="true"
@@ -94,8 +94,7 @@
             android:layout_marginTop="46dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="38dp"
-            />
+            android:layout_marginBottom="38dp" />
 
 
     </RelativeLayout>
@@ -112,13 +111,13 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.707">
+        app:layout_constraintVertical_bias="0.692">
 
 
         <ImageButton
+            android:id="@+id/imageNum1ResulSuma"
             android:layout_width="91dp"
             android:layout_height="117dp"
             android:layout_alignParentStart="true"
@@ -133,10 +132,10 @@
             android:layout_marginEnd="265dp"
             android:layout_marginRight="265dp"
             android:layout_marginBottom="94dp"
-            android:background="@drawable/animal_number_5_t" />
+            android:onClick="resultadouno" />
 
         <ImageButton
-            android:id="@+id/imageButton12"
+            android:id="@+id/imageNum2ResulSuma"
             android:layout_width="91dp"
             android:layout_height="117dp"
             android:layout_alignParentStart="true"
@@ -151,9 +150,10 @@
             android:layout_marginEnd="143dp"
             android:layout_marginRight="143dp"
             android:layout_marginBottom="12dp"
-            android:background="@drawable/animal_number_3_t" />
+            android:onClick="resultadodos" />
 
         <ImageButton
+            android:id="@+id/imageNum3ResulSuma"
             android:layout_width="wrap_content"
             android:layout_height="114dp"
             android:layout_alignParentStart="true"
@@ -168,7 +168,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="99dp"
-            android:background="@drawable/animal_number_4_t" />
+            android:onClick="resultadotres" />
 
 
     </RelativeLayout>
@@ -176,8 +176,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="279dp"
-        android:layout_height="43dp"
+        android:layout_width="360dp"
+        android:layout_height="47dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -186,11 +186,43 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.431"
+        app:layout_constraintVertical_bias="0.422"
         app:srcCompat="@drawable/cuanto_es_label" />
+
+
+    <Button
+        android:id="@+id/btnDeNuevo"
+        android:layout_width="155dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/boton_play_t"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="169dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDeNuevo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.907"
+        app:srcCompat="@drawable/intenta_de_nuevo_label" />
 
 
 </android.support.constraint.ConstraintLayout>
