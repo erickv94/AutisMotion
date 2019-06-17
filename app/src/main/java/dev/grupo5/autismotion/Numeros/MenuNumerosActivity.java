@@ -16,6 +16,8 @@ public class MenuNumerosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_numeros);
 
+
+
         Button btnsumar = (Button) findViewById(R.id.sumando);
         btnsumar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +45,8 @@ public class MenuNumerosActivity extends AppCompatActivity {
                 startActivityForResult(intent,0);
             }
         });
+
+
     }
 
 
