@@ -2,6 +2,8 @@ package dev.grupo5.autismotion.Animales;
 
 import android.app.Activity;
 import android.arch.core.executor.TaskExecutor;
+import android.content.pm.ActivityInfo;
+import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,8 +17,8 @@ import android.widget.Toast;
 import dev.grupo5.autismotion.R;
 
 public class AnimalesActivity extends Activity {
-    String[] nombresAnimales={"mono","tucan","tortuga","jirafa","elefante"};
-    String[] siluetasAnimales={"s_mono","s_tucan","s_tortuga","s_jirafa","s_elefante"};
+    String[] nombresAnimales={"mono","tucan","tortuga","jirafa","elefante","caballo","cerdo","mariposa"};
+    String[] siluetasAnimales={"s_mono","s_tucan","s_tortuga","s_jirafa","s_elefante","s_caballo","s_cerdo","s_mariposa"};
     Integer intentos=3;
     Button btnAceptar;
     TextView lblIntentos;
@@ -24,12 +26,18 @@ public class AnimalesActivity extends Activity {
     EditText editNombre;
     private int numeroGenerado=0;
     ImageView imagen;
-
+    MediaPlayer reproductor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animales);
+
+        reproductor=MediaPlayer.create(getApplicationContext(), R.raw.sonidofondoanimales);
+        reproductor.start();
+
+        //Solo permite la orientacion vertical en la pantalla
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         btnAceptar=findViewById(R.id.btnAceptar);
         lblIntentos=findViewById(R.id.lblIntentos);
@@ -91,5 +99,27 @@ public class AnimalesActivity extends Activity {
             }
         }.start();
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (reproductor.isPlaying()) {
+            reproductor.stop();
+            reproductor.release();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        reproductor.start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        reproductor.pause();
+    }
+
 
 }
