@@ -2,6 +2,7 @@ package dev.grupo5.autismotion.Animales;
 
 import android.app.Service;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,13 +26,23 @@ public class AnimalesMenuActivity extends AppCompatActivity {
         reproductor=MediaPlayer.create(getApplicationContext(), R.raw.sonidofondoanimales);
         reproductor.start();
 
-
+        //Solo permite la orientacion vertical en la pantalla
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         Button btnanimales = (Button) findViewById(R.id.animales);
         btnanimales.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(),AnimalesActivity.class);
+                startActivityForResult(intent,0);
+            }
+        });
+
+        Button btnvideo = (Button) findViewById(R.id.cuento);
+        btnvideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),CuentoActivity.class);
                 startActivityForResult(intent,0);
             }
         });
@@ -52,10 +63,10 @@ public class AnimalesMenuActivity extends AppCompatActivity {
         reproductor.start();
     }
 
-    /*@Override
+    @Override
     protected void onPause() {
         super.onPause();
         reproductor.pause();
-    }*/
+    }
 
 }
