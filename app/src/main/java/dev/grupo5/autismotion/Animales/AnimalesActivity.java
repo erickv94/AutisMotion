@@ -22,7 +22,7 @@ public class AnimalesActivity extends Activity {
     TextView lblIntentos;
     TextView lblConteo;
     EditText editNombre;
-    int numeroGenerado=0;
+    private int numeroGenerado=0;
     ImageView imagen;
 
 
@@ -44,6 +44,7 @@ public class AnimalesActivity extends Activity {
             @Override
             public void onClick(View v) {
                 String nombre=editNombre.getText().toString().toLowerCase();
+
                 if (nombre.equals(nombresAnimales[numeroGenerado])){
                    establecerAnimal(numeroGenerado);
                    esperar();
@@ -73,7 +74,7 @@ public class AnimalesActivity extends Activity {
         return (int)(Math.random()*nombresAnimales.length);
     }
 
-    public  void esperar(){
+    public void esperar(){
         new CountDownTimer(5000,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
