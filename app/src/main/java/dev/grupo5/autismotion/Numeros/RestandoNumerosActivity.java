@@ -69,7 +69,6 @@ public class RestandoNumerosActivity extends AppCompatActivity {
         asignacionnum2(num2resta);
         resultado = num1resta - num2resta;
 
->>>>>>> master
         //asignar resultados a los botones.
         asignacionResultado(posicion,resultado,resulaleat1,resulaleat2);
 
@@ -953,5 +952,3 @@ public class RestandoNumerosActivity extends AppCompatActivity {
     }
 
 }
-
-
