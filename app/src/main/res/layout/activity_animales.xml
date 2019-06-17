@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondoverde"
+    tools:context=".Animales.AnimalesActivity">
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TableRow>
+
+            <TextView
+                android:id="@+id/lblIntentos"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="¿Cuál es el nombre de este animal?"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="194dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/lblConteo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="" />
+
+
+        </LinearLayout>
+        <LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="176dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/s_tortuga" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_height="73dp">
+
+            <EditText
+                android:id="@+id/editNombre"
+                android:layout_width="241dp"
+                android:layout_height="46dp"
+                android:layout_marginBottom="80dp"
+                android:layout_marginLeft="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <Button
+                android:id="@+id/btnAceptar"
+                android:layout_width="130dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="192dp"
+                android:text="Aceptar" />
+        </LinearLayout>
+
+
+
+        <TableRow>
+            <LinearLayout/>
+
+        </TableRow>
+
+    </TableLayout>
+</RelativeLayout>

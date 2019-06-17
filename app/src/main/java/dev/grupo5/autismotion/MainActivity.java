@@ -10,9 +10,9 @@ import android.widget.ListView;
 
 public class MainActivity extends ListActivity {
 
-    String[] menu={"Menu Matematicas"};
+    String[] menu={"Menu Matematicas","Menu Animales"};
 
-    String [] activities={"MenuNumerosActivity"};
+    String [] activities={"MenuNumerosActivity","AnimalesMenuActivity"};
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +25,13 @@ public class MainActivity extends ListActivity {
             String nombreValue=activities[position];
             try{
                 Class<?> clase=Class.forName("dev.grupo5.autismotion.Numeros."+nombreValue);
+                Intent inte = new Intent(this,clase);
+                this.startActivity(inte);
+            }catch(ClassNotFoundException e){
+                e.printStackTrace();
+            }
+            try{
+                Class<?> clase=Class.forName("dev.grupo5.autismotion.Animales."+nombreValue);
                 Intent inte = new Intent(this,clase);
                 this.startActivity(inte);
             }catch(ClassNotFoundException e){
