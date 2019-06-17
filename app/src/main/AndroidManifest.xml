@@ -10,12 +10,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Animales.AnimalesActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".Animales.AnimalesMenuActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".Numeros.MenuNumerosActivity" android:screenOrientation="portrait" />
+        <activity android:name=".Animales.AnimalesActivity"></activity>
+        <activity android:name=".Animales.AnimalesMenuActivity" />
+        <activity android:name=".Numeros.MenuNumerosActivity" android:screenOrientation="portrait"/>
         <activity android:name=".Numeros.ContandoNumerosActivity" android:screenOrientation="portrait" />
         <activity android:name=".Numeros.RestandoNumerosActivity" android:screenOrientation="portrait" />
-        <activity android:name=".Numeros.SumandoNumerosActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Numeros.SumandoNumerosActivity" android:screenOrientation="portrait" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
