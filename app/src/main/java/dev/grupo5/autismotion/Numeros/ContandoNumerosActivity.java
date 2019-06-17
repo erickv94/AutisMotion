@@ -1,16 +1,22 @@
 package dev.grupo5.autismotion.Numeros;
 
+import android.content.DialogInterface;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
+import android.view.View.OnClickListener;
 
 import dev.grupo5.autismotion.R;
 
-public class ContandoNumerosActivity extends AppCompatActivity {
+public class ContandoNumerosActivity extends AppCompatActivity  {
     ImageView imagennumero;
     ImageButton derecha,izquierda,sonido;
+    MediaPlayer media;
+
     int contador;
 
     @Override
@@ -24,6 +30,77 @@ public class ContandoNumerosActivity extends AppCompatActivity {
         sonido = findViewById(R.id.botonsonido);
         contador =0;
         imagennumero.setBackgroundResource(R.drawable.animal_number_0_t);
+    }
+    public void sonidito(View v){
+        switch (contador){
+            case 0:{
+                stopPlaying();
+                media = MediaPlayer.create(getApplicationContext(), R.raw.numero_0);
+                media.start();
+                break;
+            }
+            case 1:{
+                stopPlaying();
+                media = MediaPlayer.create(getApplicationContext(), R.raw.numero_1);
+                media.start();
+                break;
+            }
+            case 2:{
+                stopPlaying();
+                media = MediaPlayer.create(getApplicationContext(), R.raw.numero_2);
+                media.start();
+                break;
+            }
+            case 3:{
+                stopPlaying();
+                media = MediaPlayer.create(getApplicationContext(), R.raw.numero_3);
+                media.start();
+                break;
+            }
+            case 4:{
+                stopPlaying();
+                media = MediaPlayer.create(getApplicationContext(), R.raw.numero_4);
+                media.start();
+                break;
+            }
+            case 5:{
+                stopPlaying();
+                media = MediaPlayer.create(getApplicationContext(), R.raw.numero_5);
+                media.start();
+                break;
+            }
+            case 6:{
+                stopPlaying();
+                media = MediaPlayer.create(getApplicationContext(), R.raw.numero_6);
+                media.start();
+                break;
+            }
+            case 7:{
+                stopPlaying();
+                media = MediaPlayer.create(getApplicationContext(), R.raw.numero_7);
+                media.start();
+                break;
+            }
+            case 8:{
+                stopPlaying();
+                media = MediaPlayer.create(getApplicationContext(), R.raw.numero_8);
+                media.start();
+                break;
+            }
+            case 9:{
+                stopPlaying();
+                media = MediaPlayer.create(getApplicationContext(), R.raw.numero_9);
+                media.start();
+                break;
+            }
+        }
+    }
+    private void stopPlaying() {
+        if (media != null) {
+            media.stop();
+            media.release();
+            media = null;
+        }
     }
     public void moverderecha(View v){
         switch (contador){
