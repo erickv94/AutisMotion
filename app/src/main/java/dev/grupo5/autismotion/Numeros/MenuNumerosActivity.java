@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import dev.grupo5.autismotion.MainActivity;
 import dev.grupo5.autismotion.R;
 
 public class MenuNumerosActivity extends AppCompatActivity {
@@ -42,6 +43,15 @@ public class MenuNumerosActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(),ContandoNumerosActivity.class);
+                startActivityForResult(intent,0);
+            }
+        });
+
+        Button principal = (Button) findViewById(R.id.principal);
+        principal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), MainActivity.class);
                 startActivityForResult(intent,0);
             }
         });
