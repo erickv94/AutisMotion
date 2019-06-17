@@ -59,12 +59,12 @@ public class RestandoNumerosActivity extends AppCompatActivity {
         imageNum2ResulResta=findViewById(R.id.imageNum2ResulResta);
         imageNum3ResulResta=findViewById(R.id.imageNum3ResulResta);
         //asignacion numero uno y dos para sumar con su respectiva imagen
-        asignacionnum1(num1resta);
-        asignacionnum2(num2resta);
+        asignacionnum1(num1resta,num2resta);
+        asignacionnum2(num2resta,num1resta);
         //realizando suma de aleatorios
         resultado=num1resta-num2resta;
         //asignar resultados a los botones.
-        asignacionResultado(posicion,resultado,resulaleat1,resulaleat2,num1resta,num2resta);
+        asignacionResultado(posicion,resultado,resulaleat1,resulaleat2);
 
         Button btrestar = (Button) findViewById(R.id.btnDeNuevo2);
         btrestar.setOnClickListener(new View.OnClickListener() {
@@ -134,7 +134,7 @@ public class RestandoNumerosActivity extends AppCompatActivity {
 
 
 
-    public void asignacionResultado(int posicion,int resultado,int resulaleat1,int resulaleat2,int num1, int num2){
+    public void asignacionResultado(int posicion,int resultado,int resulaleat1,int resulaleat2){
 //para no repetir
         while(resulaleat1==resultado){
             resulaleat1=aleatorio.nextInt(5);
@@ -142,11 +142,7 @@ public class RestandoNumerosActivity extends AppCompatActivity {
         while(resulaleat2==resultado || resulaleat2==resulaleat1){
             resulaleat2=aleatorio.nextInt(5);
         }
-        while (num1<num2){
-             num1=aleatorio.nextInt(5);
-             num2=aleatorio.nextInt(5);
 
-        }
 
         switch (posicion){
 
@@ -896,7 +892,13 @@ public class RestandoNumerosActivity extends AppCompatActivity {
 
 
 
-    public void asignacionnum1(int num1resta){
+    public void asignacionnum1(int num1resta,int num2){
+
+        while (num1resta<num2){
+            num1resta=aleatorio.nextInt(5);
+            num2=aleatorio.nextInt(5);
+
+        }
 
         switch (num1resta){
             case 0:{ imageNum1Res.setBackgroundResource(R.drawable.animal_number_0_t);break;
@@ -921,7 +923,13 @@ public class RestandoNumerosActivity extends AppCompatActivity {
             }
         }
     }
-    public void asignacionnum2(int num2resta){
+    public void asignacionnum2(int num2resta,int num1){
+
+        while (num1<num2resta){
+            num1=aleatorio.nextInt(5);
+            num2resta=aleatorio.nextInt(5);
+
+        }
 
         switch (num2resta){
             case 0:{ imageNum2Res.setBackgroundResource(R.drawable.animal_number_0_t);break;
