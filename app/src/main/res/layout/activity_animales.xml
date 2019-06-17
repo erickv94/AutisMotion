@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/fondoverde"
     tools:context=".Animales.AnimalesActivity">
     <TableLayout
         android:layout_width="wrap_content"
@@ -28,18 +29,20 @@
             <TextView
 
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="¿Cuál es el nombre de este animal?"
-                android:textSize="30dp"
+                android:textSize="25dp"
                 android:textStyle="bold" />
         </TableRow>
+
         <LinearLayout
             android:layout_width="194dp"
-            android:layout_height="32dp">
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical">
 
             <TextView
                 android:id="@+id/lblConteo"
