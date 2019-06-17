@@ -62,8 +62,12 @@ public class RestandoNumerosActivity extends AppCompatActivity {
         asignacionnum1(num1resta);
         asignacionnum2(num2resta);
         //realizando suma de aleatorios
-        validandoresta(num1resta,num2resta);
-        resultado=num1resta-num2resta;
+        if(num1resta<num2resta) {
+            resultado = num1resta - num2resta;
+        }
+        else{
+            num1resta=aleatorio.nextInt(5);
+        }
         //asignar resultados a los botones.
         asignacionResultado(posicion,resultado,resulaleat1,resulaleat2);
 
@@ -79,16 +83,6 @@ public class RestandoNumerosActivity extends AppCompatActivity {
 
 
     }
-
-
-        public  void  validandoresta(int num1, int num2)
-        {
-            while (num1<num2){
-                num1=aleatorio.nextInt(5);
-            }
-
-        }
-
 
 
     public void resultadouno(View v){
