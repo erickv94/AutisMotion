@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AutisMotion</string>
+    <string name="title_activity_emociones">EmocionesActivity</string>
 </resources>
