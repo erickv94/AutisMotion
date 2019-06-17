@@ -58,9 +58,7 @@ public class RestandoNumerosActivity extends AppCompatActivity {
         imageNum1ResulResta=findViewById(R.id.imageNum1ResulResta);
         imageNum2ResulResta=findViewById(R.id.imageNum2ResulResta);
         imageNum3ResulResta=findViewById(R.id.imageNum3ResulResta);
-        //asignacion numero uno y dos para sumar con su respectiva imagen
-        asignacionnum1(num1resta);
-        asignacionnum2(num2resta);
+
         //realizando suma de aleatorios
         if(num1resta<num2resta) {
             resultado = num1resta - num2resta;
@@ -68,6 +66,9 @@ public class RestandoNumerosActivity extends AppCompatActivity {
         else{
             num1resta=aleatorio.nextInt(5);
         }
+        //asignacion numero uno y dos para sumar con su respectiva imagen
+        asignacionnum1(num1resta);
+        asignacionnum2(num2resta);
         //asignar resultados a los botones.
         asignacionResultado(posicion,resultado,resulaleat1,resulaleat2);
 
@@ -898,7 +899,6 @@ public class RestandoNumerosActivity extends AppCompatActivity {
 
 
     public void asignacionnum1(int num1resta){
-
 
 
         switch (num1resta){
