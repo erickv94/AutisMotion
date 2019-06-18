@@ -9,7 +9,7 @@
     tools:context=".Numeros.ContandoNumerosActivity">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/image_cara_feliz"
         android:layout_width="264dp"
         android:layout_height="94dp"
         android:layout_marginStart="8dp"

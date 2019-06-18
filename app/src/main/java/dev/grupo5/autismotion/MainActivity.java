@@ -13,6 +13,7 @@ import dev.grupo5.autismotion.Animales.AnimalesActivity;
 import dev.grupo5.autismotion.Animales.AnimalesMenuActivity;
 import dev.grupo5.autismotion.Emociones.EmocionesActivity;
 import dev.grupo5.autismotion.Numeros.MenuNumerosActivity;
+import dev.grupo5.autismotion.Videos.ListaVideosActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
     public void animalesOption(View view){
         //cambiar activitygit
         Intent intent= new Intent(MainActivity.this, AnimalesMenuActivity.class);
+        startActivity(intent);
+
+    }
+    public void videosOption(View view){
+        //cambiar activitygit
+        Intent intent= new Intent(MainActivity.this, ListaVideosActivity.class);
         startActivity(intent);
 
     }
