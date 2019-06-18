@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_emociones"
+
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+
     tools:context=".Emociones.EmocionesActivity">
 
 
 
 
-    tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:background="@android:color/white">
+  
 
     <TextView
         android:id="@+id/countLabel"
@@ -35,12 +36,11 @@
         android:id="@+id/btn1"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:tag="Feliz"
-        android:src="@drawable/cara_feliz"
         android:layout_marginTop="10dp"
         android:clickable="true"
         android:onClick="chequearEmocion"
-        />
+        android:src="@drawable/cara_feliz"
+        android:tag="Feliz" />
     <ImageView
         android:id="@+id/btn2"
         android:layout_width="300dp"
