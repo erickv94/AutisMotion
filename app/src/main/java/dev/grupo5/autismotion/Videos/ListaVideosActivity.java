@@ -20,8 +20,6 @@ public class ListaVideosActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         ListView listView = getListView();
         listView.setBackgroundResource(R.drawable.fondo_videos);
-        ColorDrawable cd = new ColorDrawable(0xFFFF6666);
-        listView.setDivider(cd);
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, menu));
     }
     @Override
