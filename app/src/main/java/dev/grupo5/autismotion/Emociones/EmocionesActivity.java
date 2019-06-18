@@ -1,6 +1,7 @@
 package dev.grupo5.autismotion.Emociones;
 
 import android.content.DialogInterface;
+import android.media.MediaPlayer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,19 +23,20 @@ public class EmocionesActivity extends AppCompatActivity {
     private ImageView Btn1;
     private ImageView Btn2;
     private ImageView Btn3;
+    MediaPlayer media;
 
     private String respuestaCorrecta;
     private int contadorRespuestasCorrectas = 0;
     private int contadorPregunta = 1;
-
+    private String sonidoRespuesta;
     ArrayList<ArrayList<String>> preguntasArray = new ArrayList<>();
 
     String Datos[][] = {
-            {"boyhappy", "Feliz"},
-            {"womanangry", "Enojado"},
-            {"mansad", "Triste"},
-            {"oldmanhappy", "Feliz"},
-            {"oldmanangry", "Enojado"},
+            {"boyhappy", "Feliz","kid","kid_r"},
+            {"womanangry", "Enojado","woman","woman_r"},
+            {"mansad", "Triste","man","man_r"},
+            {"oldmanhappy", "Feliz","old","old_r"},
+            {"oldmanangry", "Enojado","old","old_r2"},
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +53,8 @@ public class EmocionesActivity extends AppCompatActivity {
             ArrayList<String> tmpArray = new ArrayList<>();
             tmpArray.add(Datos[i][0]); // Imagen
             tmpArray.add(Datos[i][1]); // respuesta correcta
-
+            tmpArray.add(Datos[i][2]); // respuesta correcta
+            tmpArray.add(Datos[i][3]); // respuesta correcta
 
             preguntasArray.add(tmpArray);
         }
@@ -74,8 +77,16 @@ public class EmocionesActivity extends AppCompatActivity {
 
         imagenPregunta.setImageResource(
                 getResources().getIdentifier(pregunta.get(0), "drawable", getPackageName()));
-        respuestaCorrecta = pregunta.get(1);
 
+        //obteniendo el idRaw
+        int idRaw = this.getResources().
+                getIdentifier(pregunta.get(2),"raw", this.getPackageName());
+        stopPlaying();
+
+        media = MediaPlayer.create(getApplicationContext(), idRaw);
+        media.start();
+        respuestaCorrecta = pregunta.get(1);
+        sonidoRespuesta=pregunta.get(3);
         pregunta.remove(0);
         Collections.shuffle(pregunta);
 
@@ -93,9 +104,23 @@ public class EmocionesActivity extends AppCompatActivity {
 
         if (txt.equals(respuestaCorrecta)) {
             alertTitle = "Correcto!";
+
+
+            //obteniendo el idRaw
+            int idRaw = this.getResources().
+                    getIdentifier(sonidoRespuesta,"raw", this.getPackageName());
+            stopPlaying();
+
+            media = MediaPlayer.create(getApplicationContext(), idRaw);
+            media.start();
             contadorRespuestasCorrectas++;
 
         } else {
+
+
+            stopPlaying();
+            media = MediaPlayer.create(getApplicationContext(),R.raw.wrong);
+            media.start();
             alertTitle = "Incorrecto...";
         }
 
@@ -139,4 +164,11 @@ public class EmocionesActivity extends AppCompatActivity {
         builder.show();
     }
 
+    private void stopPlaying() {
+        if (media != null) {
+            media.stop();
+            media.release();
+            media = null;
+        }
+    }
 }
