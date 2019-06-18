@@ -33,7 +33,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/recursocirculodeeppurple"
-                    android:src="@drawable/ic_format_list_numbered_black_24dp"
+                    android:src="@drawable/numeros"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -72,7 +72,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/shapedos"
-                    android:src="@drawable/ic_insert_emoticon_black_24dp"
+                    android:src="@drawable/moods"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -122,7 +122,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/shaptres"
-                    android:src="@drawable/ic_search_black_24dp"
+                    android:src="@drawable/elephant"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
