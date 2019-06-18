@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,4 +8,61 @@
     tools:context=".Emociones.EmocionesActivity">
 
 
-</android.support.constraint.ConstraintLayout>
+
+
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/countLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q1"
+        android:textSize="22sp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/questionImage"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:src="@drawable/boyhappy"
+        android:layout_marginTop="10dp"/>
+
+
+    <ImageView
+        android:id="@+id/btn1"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:tag="Feliz"
+        android:src="@drawable/cara_feliz"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:onClick="chequearEmocion"
+        />
+    <ImageView
+        android:id="@+id/btn2"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:tag="Triste"
+        android:src="@drawable/cara_triste"
+        android:layout_marginTop="10dp"
+        android:onClick="chequearEmocion"
+        />
+    <ImageView
+        android:id="@+id/btn3"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:tag="Enojado"
+        android:src="@drawable/cara_enojada"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:onClick="chequearEmocion"
+        />
+
+
+
+</LinearLayout>
+
