@@ -30,31 +30,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Animales.AnimalesActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Animales.AnimalesMenuActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Numeros.MenuNumerosActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Numeros.ContandoNumerosActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Numeros.RestandoNumerosActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Numeros.SumandoNumerosActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Emociones.EmocionesActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".Animales.CuentoActivity" />
-        <activity android:name=".MainActivity">
 
-        </activity>
+
+
     </application>
 
 </manifest>

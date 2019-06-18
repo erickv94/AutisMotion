@@ -3,6 +3,7 @@ package dev.grupo5.autismotion.Videos;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,10 @@ public class ListaVideosActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ListView listView = getListView();
+        listView.setBackgroundResource(R.drawable.fondo_videos);
+        ColorDrawable cd = new ColorDrawable(0xFFFF6666);
+        listView.setDivider(cd);
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, menu));
     }
     @Override
