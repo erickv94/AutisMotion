@@ -13,7 +13,7 @@ import android.widget.ListView;
 import dev.grupo5.autismotion.R;
 
 public class ListaVideosActivity extends ListActivity {
-    String [] menu = {"aprende a contar hasta 9","Animales de la granja","La liebre y la tortuga","El leon y el raton"};
+    String [] menu = {"Aprende a contar hasta 9","Animales de la granja","La liebre y la tortuga","El leon y el raton"};
     String [] videoID = {"4ecWaNBuMew","PveUz107GMs","js1lKmt-Mag","k27Gt4Whlto"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,6 @@ public class ListaVideosActivity extends ListActivity {
     protected void onListItemClick(ListView l, View v, int position, long id){
         super.onListItemClick(l, v, position, id);
         String Value=videoID[position];
-        l.getChildAt(position).setBackgroundColor(Color.rgb(128, 128, 255));
         try{
             Class<?> clase=Class.forName("dev.grupo5.autismotion.Videos.videosActivity");
             Intent intent = new Intent(v.getContext(),videosActivity.class);
