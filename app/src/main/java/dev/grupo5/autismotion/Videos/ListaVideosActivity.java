@@ -17,6 +17,8 @@ public class ListaVideosActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ListView listView = getListView();
+        listView.setBackgroundResource(R.drawable.fondomenu);
         setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, menu));
     }
     @Override
